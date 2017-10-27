@@ -4,6 +4,7 @@ Docker Cheat Sheet.
 
 ### Install
 Install `Docker for Mac` app [Installation](https://docs.docker.com/docker-for-mac/install/)
+> Give Docker Engine at least 8GB RAM and 4 CPU Cores for running Hadoop components
 
 ### Docker Commands
 
