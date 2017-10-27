@@ -74,9 +74,9 @@ export SPARK_LOCAL_IP="127.0.0.1"
 ```bash
 spark-shell --master spark://localhost:7077
 # or with docker-compose
-    docker-compose exec master bash
+    docker-compose exec spark-master bash
     # start spark shell with in this bash
-    spark-shell --master spark://master:7077
+    spark-shell --master spark://spark-master:7077
     # or run example `SparkPi` job
     run-example SparkPi 10
 ```
