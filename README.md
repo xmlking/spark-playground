@@ -43,13 +43,13 @@ docker-compose up spark-worker
 docker-compose up zeppelin
 # scall up workers if needed
 docker-compose scale spark-worker=2
-# restart spark-master
+# to restart any container 
 docker-compose restart spark-master
-# shutdown
+# to shutdown
 docker-compose down
 # to see ports of workers bind to host
 docker-compose ps
-# logs
+# to see logs
 docker-compose logs -f zeppelin
 # ssh to a service(master)
 docker-compose exec spark-master bash
@@ -139,8 +139,8 @@ gradle build --refresh-dependencies
 * https://bigdatagurus.wordpress.com/2017/03/01/how-to-start-spark-cluster-in-minutes/
 * https://zeppelin.apache.org/docs/0.7.2/install/cdh.html
 * https://spark.apache.org/examples.html
-https://github.com/cliftbar/etl-stack/blob/master/docker-compose.yml
-https://github.com/big-data-europe/docker-hive
+* https://github.com/cliftbar/etl-stack/blob/master/docker-compose.yml
+* https://github.com/big-data-europe/docker-hive
+* https://github.com/SANSA-Stack/SANSA-Notebooks/tree/develop
+ 
 
-### TODO
-https://github.com/SANSA-Stack/SANSA-Notebooks/tree/develop
