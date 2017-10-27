@@ -1,0 +1,127 @@
+{
+  "paragraphs": [
+    {
+      "text": "import net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder\n\nval input \u003d \"hdfs://namenode:8020/data/ont_functional.owl\"\n\nval dataset \u003d FunctionalSyntaxOWLAxiomsDatasetBuilder.build(spark, input)\ndataset.take(10).foreach(println(_))",
+      "user": "anonymous",
+      "dateUpdated": "Oct 27, 2017 1:46:27 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/text",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimport net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder\n\ninput: String \u003d hdfs://namenode:8020/data/ont_functional.owl\n\ndataset: net.sansa_stack.owl.spark.dataset.OWLAxiomsDataset \u003d [value: binary]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\norg.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 83.0 failed 4 times, most recent failure: Lost task 0.3 in stage 83.0 (TID 122, 172.18.0.5, executor 0): java.lang.NoSuchMethodError: com.google.inject.util.Types.collectionOf(Ljava/lang/reflect/Type;)Ljava/lang/reflect/ParameterizedType;\n\tat com.google.inject.multibindings.Multibinder.collectionOfProvidersOf(Multibinder.java:202)\n\tat com.google.inject.multibindings.Multibinder$RealMultibinder.\u003cinit\u003e(Multibinder.java:283)\n\tat com.google.inject.multibindings.Multibinder$RealMultibinder.\u003cinit\u003e(Multibinder.java:258)\n\tat com.google.inject.multibindings.Multibinder.newRealSetBinder(Multibinder.java:178)\n\tat com.google.inject.multibindings.Multibinder.newSetBinder(Multibinder.java:132)\n\tat uk.ac.manchester.cs.owl.owlapi.OWLAPIImplModule.multibind(OWLAPIImplModule.java:71)\n\tat uk.ac.manchester.cs.owl.owlapi.OWLAPIImplModule.configure(OWLAPIImplModule.java:65)\n\tat com.google.inject.AbstractModule.configure(AbstractModule.java:59)\n\tat com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)\n\tat com.google.inject.spi.Elements.getElements(Elements.java:101)\n\tat com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)\n\tat com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)\n\tat com.google.inject.Guice.createInjector(Guice.java:95)\n\tat com.google.inject.Guice.createInjector(Guice.java:72)\n\tat com.google.inject.Guice.createInjector(Guice.java:62)\n\tat org.semanticweb.owlapi.apibinding.OWLManager.createInjector(OWLManager.java:104)\n\tat org.semanticweb.owlapi.apibinding.OWLManager.createOWLOntologyManager(OWLManager.java:44)\n\tat net.sansa_stack.owl.common.parsing.FunctionalSyntaxParsing$class.man(FunctionalSyntaxParsing.scala:31)\n\tat net.sansa_stack.owl.common.parsing.FunctionalSyntaxParsing$class.makeAxiom(FunctionalSyntaxParsing.scala:55)\n\tat net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$.makeAxiom(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:8)\n\tat net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$$anonfun$build$1.apply(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:16)\n\tat net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$$anonfun$build$1.apply(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:16)\n\tat org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)\n\tat org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)\n\tat org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)\n\tat org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)\n\tat org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)\n\tat org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:827)\n\tat org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:827)\n\tat org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)\n\tat org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)\n\tat org.apache.spark.rdd.RDD.iterator(RDD.scala:287)\n\tat org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)\n\tat org.apache.spark.scheduler.Task.run(Task.scala:99)\n\tat org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:745)\n\nDriver stacktrace:\n  at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1435)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1423)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1422)\n  at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)\n  at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)\n  at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1422)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)\n  at scala.Option.foreach(Option.scala:257)\n  at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:802)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1650)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1605)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1594)\n  at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)\n  at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:628)\n  at org.apache.spark.SparkContext.runJob(SparkContext.scala:1925)\n  at org.apache.spark.SparkContext.runJob(SparkContext.scala:1938)\n  at org.apache.spark.SparkContext.runJob(SparkContext.scala:1951)\n  at org.apache.spark.sql.execution.SparkPlan.executeTake(SparkPlan.scala:333)\n  at org.apache.spark.sql.execution.CollectLimitExec.executeCollect(limit.scala:38)\n  at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$execute$1$1.apply(Dataset.scala:2378)\n  at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:57)\n  at org.apache.spark.sql.Dataset.withNewExecutionId(Dataset.scala:2780)\n  at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$execute$1(Dataset.scala:2377)\n  at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collect(Dataset.scala:2384)\n  at org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2120)\n  at org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2119)\n  at org.apache.spark.sql.Dataset.withTypedCallback(Dataset.scala:2810)\n  at org.apache.spark.sql.Dataset.head(Dataset.scala:2119)\n  at org.apache.spark.sql.Dataset.take(Dataset.scala:2334)\n  ... 50 elided\nCaused by: java.lang.NoSuchMethodError: com.google.inject.util.Types.collectionOf(Ljava/lang/reflect/Type;)Ljava/lang/reflect/ParameterizedType;\n  at com.google.inject.multibindings.Multibinder.collectionOfProvidersOf(Multibinder.java:202)\n  at com.google.inject.multibindings.Multibinder$RealMultibinder.\u003cinit\u003e(Multibinder.java:283)\n  at com.google.inject.multibindings.Multibinder$RealMultibinder.\u003cinit\u003e(Multibinder.java:258)\n  at com.google.inject.multibindings.Multibinder.newRealSetBinder(Multibinder.java:178)\n  at com.google.inject.multibindings.Multibinder.newSetBinder(Multibinder.java:132)\n  at uk.ac.manchester.cs.owl.owlapi.OWLAPIImplModule.multibind(OWLAPIImplModule.java:71)\n  at uk.ac.manchester.cs.owl.owlapi.OWLAPIImplModule.configure(OWLAPIImplModule.java:65)\n  at com.google.inject.AbstractModule.configure(AbstractModule.java:59)\n  at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)\n  at com.google.inject.spi.Elements.getElements(Elements.java:101)\n  at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)\n  at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)\n  at com.google.inject.Guice.createInjector(Guice.java:95)\n  at com.google.inject.Guice.createInjector(Guice.java:72)\n  at com.google.inject.Guice.createInjector(Guice.java:62)\n  at org.semanticweb.owlapi.apibinding.OWLManager.createInjector(OWLManager.java:104)\n  at org.semanticweb.owlapi.apibinding.OWLManager.createOWLOntologyManager(OWLManager.java:44)\n  at net.sansa_stack.owl.common.parsing.FunctionalSyntaxParsing$class.man(FunctionalSyntaxParsing.scala:31)\n  at net.sansa_stack.owl.common.parsing.FunctionalSyntaxParsing$class.makeAxiom(FunctionalSyntaxParsing.scala:55)\n  at net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$.makeAxiom(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:8)\n  at net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$$anonfun$build$1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.apply(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:16)\n  at net.sansa_stack.owl.spark.dataset.FunctionalSyntaxOWLAxiomsDatasetBuilder$$anonfun$build$1.apply(FunctionalSyntaxOWLAxiomsDatasetBuilder.scala:16)\n  at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)\n  at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)\n  at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)\n  at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)\n  at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)\n  at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:827)\n  at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:827)\n  at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)\n  at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)\n  at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)\n  at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)\n  at org.apache.spark.scheduler.Task.run(Task.scala:99)\n  at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)\n  ... 3 more\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1494492505471_454897908",
+      "id": "20170511-084825_834127049",
+      "dateCreated": "May 11, 2017 8:48:25 AM",
+      "dateStarted": "Oct 27, 2017 1:46:27 AM",
+      "dateFinished": "Oct 27, 2017 1:46:30 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import net.sansa_stack.owl.spark.dataset.ManchesterSyntaxOWLAxiomsDatasetBuilder\n\nval input \u003d \"hdfs://namenode:8020/data/ont_manchester.owl\"\n\nval dataset \u003d ManchesterSyntaxOWLAxiomsDatasetBuilder.build(spark, input)\ndataset.take(10).foreach(println(_))",
+      "user": "anonymous",
+      "dateUpdated": "May 11, 2017 2:06:11 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/text",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimport net.sansa_stack.owl.spark.dataset.ManchesterSyntaxOWLAxiomsDatasetBuilder\n\ninput: String \u003d hdfs://namenode:8020/data/ont_manchester.owl\n\ndataset: net.sansa_stack.owl.spark.dataset.OWLAxiomsDataset \u003d [value: binary]\nDeclaration(AnnotationProperty(\u003chttp://ex.com/bar#annProp1\u003e))\nSubAnnotationPropertyOf(\u003chttp://ex.com/bar#annProp1\u003e \u003chttp://ex.com/bar#annProp2\u003e)\nAnnotationPropertyRange(\u003chttp://ex.com/bar#annProp1\u003e \u003chttp://ex.com/bar#Cls2\u003e)\nAnnotationPropertyDomain(\u003chttp://ex.com/bar#annProp1\u003e \u003chttp://ex.com/bar#Cls1\u003e)\nDeclaration(AnnotationProperty(\u003chttp://ex.com/bar#annProp2\u003e))\nDeclaration(AnnotationProperty(\u003chttp://ex.com/bar#hasTitle\u003e))\nDeclaration(AnnotationProperty(\u003chttp://ex.com/bar#label\u003e))\nDeclaration(AnnotationProperty(\u003chttp://ex.com/default#description\u003e))\nDeclaration(AnnotationProperty(\u003chttp://ex.com/foo#ann\u003e))\nDeclaration(AnnotationProperty(\u003chttp://ex.com/foo#hasName\u003e))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1494494430280_1062578933",
+      "id": "20170511-092030_318054404",
+      "dateCreated": "May 11, 2017 9:20:30 AM",
+      "dateStarted": "May 11, 2017 2:06:11 PM",
+      "dateFinished": "May 11, 2017 2:06:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "May 11, 2017 9:50:18 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1494496140789_-1258622693",
+      "id": "20170511-094900_58929009",
+      "dateCreated": "May 11, 2017 9:49:00 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "OWL",
+  "id": "2CFH4E3TG",
+  "angularObjects": {
+    "2CWKZJSA2:shared_process": [],
+    "2CY79CVJ7:shared_process": [],
+    "2CW1TXE3D:shared_process": [],
+    "2CWY59WEQ:shared_process": [],
+    "2CY8UKVRT:shared_process": [],
+    "2CWU2J515:shared_process": [],
+    "2CVFF8N4U:shared_process": [],
+    "2CW58TZG9:shared_process": [],
+    "2CYH18VR3:shared_process": [],
+    "2CWAH6S82:shared_process": [],
+    "2CWD9T36S:shared_process": [],
+    "2CXJA9YDP:shared_process": [],
+    "2CWMAJY61:shared_process": [],
+    "2CXDJFDPZ:shared_process": [],
+    "2CYH2MC4J:shared_process": [],
+    "2CYYHCVN8:shared_process": [],
+    "2CWRP4PP9:shared_process": [],
+    "2CXY62DPD:shared_process": [],
+    "2CY375FSZ:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

@@ -1,0 +1,79 @@
+{
+  "paragraphs": [
+    {
+      "text": "import java.net.URI\n\nimport net.sansa_stack.rdf.spark.io.NTripleReader\nimport net.sansa_stack.rdf.spark.partition.core.RdfPartitionUtilsSpark\nimport net.sansa_stack.query.spark.sparqlify.QueryExecutionFactorySparqlifySpark\nimport net.sansa_stack.query.spark.sparqlify.SparqlifyUtils3\nimport org.aksw.jena_sparql_api.server.utils.FactoryBeanSparqlServer\nimport org.apache.spark.sql.SparkSession\n\nimport scala.collection.mutable\n\nval input \u003d \"hdfs://namenode:8020/data/rdf.nt\"\nval graphRdd \u003d NTripleReader.load(spark, URI.create(input))\n    \nval partitions \u003d RdfPartitionUtilsSpark.partitionGraph(graphRdd)\nval rewriter \u003d SparqlifyUtils3.createSparqlSqlRewriter(spark, partitions)\n    \nval port \u003d 7531\n    \nval qef \u003d new QueryExecutionFactorySparqlifySpark(spark, rewriter)\nval server \u003d FactoryBeanSparqlServer.newInstance.setSparqlServiceFactory(qef).setPort(port).create()\n\nserver.join()",
+      "user": "anonymous",
+      "dateUpdated": "Oct 27, 2017 1:45:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimport java.net.URI\n\nimport net.sansa_stack.rdf.spark.io.NTripleReader\n\nimport net.sansa_stack.rdf.spark.partition.core.RdfPartitionUtilsSpark\n\nimport net.sansa_stack.query.spark.sparqlify.QueryExecutionFactorySparqlifySpark\n\nimport net.sansa_stack.query.spark.sparqlify.SparqlifyUtils3\n\nimport org.aksw.jena_sparql_api.server.utils.FactoryBeanSparqlServer\n\nimport org.apache.spark.sql.SparkSession\n\nimport scala.collection.mutable\n\ninput: String \u003d hdfs://namenode:8020/data/rdf.nt\n\ngraphRdd: org.apache.spark.rdd.RDD[org.apache.jena.graph.Triple] \u003d MapPartitionsRDD[145] at map at NTripleReader.scala:39\npartitions: Map[net.sansa_stack.rdf.partition.core.RdfPartitionDefault,org.apache.spark.rdd.RDD[org.apache.spark.sql.Row]] \u003d Map(RdfPartitionDefault(1,http://commons.dbpedia.org/property/source,2,http://www.w3.org/2001/XMLSchema#string,true) -\u003e MapPartitionsRDD[159] at map at RdfPartitionUtilsSpark.scala:28, RdfPartitionDefault(1,http://commons.dbpedia.org/property/otherVersions,2,http://www.w3.org/2001/XMLSchema#string,true) -\u003e MapPartitionsRDD[195] at map at RdfPartitionUtilsSpark.scala:28, RdfPartitionDefault(1,http://commons.dbpedia.org/property/eo,2,http://www.w3.org/2001/XMLSchema#string,true) -\u003e MapPartitionsRDD[175] at map at RdfPartitionUtilsSpark.scala:28, RdfPartitionDefault(1,http://commons.dbpedia.org/property/width,2,http://dbpedia.org/datatype/perCent,false) -\u003e MapPartiti...\nrewriter: org.aksw.sparqlify.core.interfaces.SparqlSqlStringRewriter \u003d org.aksw.sparqlify.core.algorithms.SparqlSqlStringRewriterImpl@29f41cec\n\nport: Int \u003d 7531\n\nqef: net.sansa_stack.query.spark.sparqlify.QueryExecutionFactorySparqlifySpark \u003d net.sansa_stack.query.spark.sparqlify.QueryExecutionFactorySparqlifySpark@7e8144cd\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\njava.lang.NoClassDefFoundError: org/eclipse/jetty/xml/XmlParser\n  at org.eclipse.jetty.webapp.WebDescriptor.newParser(WebDescriptor.java:70)\n  at org.eclipse.jetty.webapp.WebDescriptor.ensureParser(WebDescriptor.java:61)\n  at org.eclipse.jetty.webapp.Descriptor.parse(Descriptor.java:59)\n  at org.eclipse.jetty.webapp.WebDescriptor.parse(WebDescriptor.java:148)\n  at org.eclipse.jetty.webapp.MetaData.setDefaults(MetaData.java:149)\n  at org.eclipse.jetty.webapp.WebXmlConfiguration.preConfigure(WebXmlConfiguration.java:54)\n  at org.eclipse.jetty.webapp.WebAppContext.preConfigure(WebAppContext.java:457)\n  at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:493)\n  at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)\n  at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)\n  at org.eclipse.jetty.server.Server.doStart(Server.java:282)\n  at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)\n  at org.aksw.jena_sparql_api.web.server.ServerUtils.startServer(ServerUtils.java:56)\n  at org.aksw.jena_sparql_api.web.server.ServerUtils.startServer(ServerUtils.java:48)\n  at org.aksw.jena_sparql_api.web.server.ServerUtils.startServer(ServerUtils.java:40)\n  at org.aksw.jena_sparql_api.server.utils.FactoryBeanSparqlServer.create(FactoryBeanSparqlServer.java:84)\n  ... 50 elided\nCaused by: java.lang.ClassNotFoundException: org.eclipse.jetty.xml.XmlParser\n  at java.net.URLClassLoader.findClass(URLClassLoader.java:381)\n  at java.lang.ClassLoader.loadClass(ClassLoader.java:424)\n  at java.lang.ClassLoader.loadClass(ClassLoader.java:357)\n  ... 66 more\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1504609209863_-361690439",
+      "id": "20170905-110009_242595472",
+      "dateCreated": "Sep 5, 2017 11:00:09 AM",
+      "dateStarted": "Oct 27, 2017 1:45:31 AM",
+      "dateFinished": "Oct 27, 2017 1:45:57 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1504609454929_46480527",
+      "id": "20170905-110414_340589980",
+      "dateCreated": "Sep 5, 2017 11:04:14 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Query",
+  "id": "2CFHT7P7X",
+  "angularObjects": {
+    "2CWKZJSA2:shared_process": [],
+    "2CY79CVJ7:shared_process": [],
+    "2CW1TXE3D:shared_process": [],
+    "2CWY59WEQ:shared_process": [],
+    "2CY8UKVRT:shared_process": [],
+    "2CWU2J515:shared_process": [],
+    "2CVFF8N4U:shared_process": [],
+    "2CW58TZG9:shared_process": [],
+    "2CYH18VR3:shared_process": [],
+    "2CWAH6S82:shared_process": [],
+    "2CWD9T36S:shared_process": [],
+    "2CXJA9YDP:shared_process": [],
+    "2CWMAJY61:shared_process": [],
+    "2CXDJFDPZ:shared_process": [],
+    "2CYH2MC4J:shared_process": [],
+    "2CYYHCVN8:shared_process": [],
+    "2CWRP4PP9:shared_process": [],
+    "2CXY62DPD:shared_process": [],
+    "2CY375FSZ:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

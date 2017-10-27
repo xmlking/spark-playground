@@ -1,0 +1,43 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Project ###
+TODO.md
+todo/
+
+### Spark
+metastore_db
+spark-warehouse
+derby.log
+output
+
+### Infra
+archive

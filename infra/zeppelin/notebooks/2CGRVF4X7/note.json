@@ -1,0 +1,107 @@
+{
+  "paragraphs": [
+    {
+      "text": "import scala.collection.mutable\nimport org.apache.spark.sql.SparkSession\nimport org.apache.log4j.{ Level, Logger }\nimport net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n\nval graphFile \u003d \"hdfs://namenode:8020/data/Clustering_sampledata.nt\"\nval outputFile \u003d \"hdfs://namenode:8020/data/clustering.out\"\nval numIterations \u003d 10\n\nRDFByModularityClustering(sc, numIterations, graphFile, outputFile)",
+      "user": "anonymous",
+      "dateUpdated": "Oct 27, 2017 2:06:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimport scala.collection.mutable\n\nimport org.apache.spark.sql.SparkSession\n\nimport org.apache.log4j.{Level, Logger}\n\nimport net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n\ngraphFile: String \u003d hdfs://namenode:8020/data/Clustering_sampledata.nt\n\noutputFile: String \u003d hdfs://namenode:8020/data/clustering.out\n\nnumIterations: Int \u003d 10\nThe number of nodes in the knowledge graph is 8 and the number of edges is 13.\nThe first ten edges of the graph look like the following: \n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user1\u003e)\n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user2\u003e)\n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user2\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user6\u003e)\n(\u003chttp://twitter/user2\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user3\u003e,\u003chttp://twitter/user4\u003e)\n(\u003chttp://twitter/user4\u003e,\u003chttp://twitter/user5\u003e)\n(\u003chttp://twitter/user5\u003e,\u003chttp://twitter/user6\u003e)\nStarting iteration\n\n1\n2\n3\n4\n5\n6\n7\nThe computed clusters are:\nCluster1  contains:\n\u003chttp://twitter/user4\u003e, \u003chttp://twitter/user5\u003e, \u003chttp://twitter/user7\u003e, \u003chttp://twitter/user6\u003e, \n\nCluster2  contains:\n\u003chttp://twitter/user0\u003e, \u003chttp://twitter/user2\u003e, \u003chttp://twitter/user1\u003e, \u003chttp://twitter/user3\u003e, \n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1494503254565_1530513202",
+      "id": "20170511-114734_1804790867",
+      "dateCreated": "May 11, 2017 11:47:34 AM",
+      "dateStarted": "Oct 27, 2017 1:46:48 AM",
+      "dateFinished": "Oct 27, 2017 1:46:53 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import scala.collection.mutable\nimport net.sansa_stack.rdf.spark.model.JenaSparkRDDOps\nimport net.sansa_stack.ml.spark.mining.amieSpark.KBObject.KB\nimport net.sansa_stack.ml.spark.mining.amieSpark.{ RDFGraphLoader, DfLoader }\nimport net.sansa_stack.ml.spark.mining.amieSpark.MineRules.Algorithm\n\nval input \u003d \"hdfs://namenode:8020/data/MineRules_sampledata.tsv\"\nval outputPath \u003d \"hdfs://namenode:8020/output\"\nval hdfsPath \u003d outputPath + \"/\"\n\nval ops \u003d JenaSparkRDDOps(sc)\nimport ops._\n\nval know \u003d new KB()\nknow.sethdfsPath(hdfsPath)\nknow.setKbSrc(input)\n\nknow.setKbGraph(RDFGraphLoader.loadFromFile(know.getKbSrc(), sc, 2))\nknow.setDFTable(DfLoader.loadFromFileDF(know.getKbSrc, sc, sqlContext, 2))\n\nval algo \u003d new Algorithm(know, 0.01, 3, 0.1, hdfsPath)\n\n//var erg \u003d algo.ruleMining(sc, sqlContext)\n//println(erg)\nvar output \u003d algo.ruleMining(sc, sqlContext)\n\nvar outString \u003d output.map { x \u003d\u003e\n  var rdfTrp \u003d x.getRule()\n  var temp \u003d \"\"\n  for (i \u003c- 0 to rdfTrp.length - 1) {\n    if (i \u003d\u003d 0) {\n      temp \u003d rdfTrp(i) + \" \u003c\u003d \"\n    } else {\n      temp +\u003d rdfTrp(i) + \" \\u2227 \"\n    }\n  }\n  temp \u003d temp.stripSuffix(\" \\u2227 \")\n  temp\n}.toSeq\nvar rddOut \u003d sparkSession.sparkContext.parallelize(outString)\nrddOut.saveAsTextFile(outputPath + \"/testOut\")",
+      "user": "anonymous",
+      "dateUpdated": "Oct 27, 2017 1:48:09 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1494503351941_-977125242",
+      "id": "20170511-114911_1382631593",
+      "dateCreated": "May 11, 2017 11:49:11 AM",
+      "dateStarted": "Oct 27, 2017 1:48:09 AM",
+      "dateFinished": "Oct 27, 2017 1:46:59 AM",
+      "status": "RUNNING",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1494503670410_82299729",
+      "id": "20170511-115430_1909909659",
+      "dateCreated": "May 11, 2017 11:54:30 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Machine Learning",
+  "id": "2CGRVF4X7",
+  "angularObjects": {
+    "2CWKZJSA2:shared_process": [],
+    "2CY79CVJ7:shared_process": [],
+    "2CW1TXE3D:shared_process": [],
+    "2CWY59WEQ:shared_process": [],
+    "2CY8UKVRT:shared_process": [],
+    "2CWU2J515:shared_process": [],
+    "2CVFF8N4U:shared_process": [],
+    "2CW58TZG9:shared_process": [],
+    "2CYH18VR3:shared_process": [],
+    "2CWAH6S82:shared_process": [],
+    "2CWD9T36S:shared_process": [],
+    "2CXJA9YDP:shared_process": [],
+    "2CWMAJY61:shared_process": [],
+    "2CXDJFDPZ:shared_process": [],
+    "2CYH2MC4J:shared_process": [],
+    "2CYYHCVN8:shared_process": [],
+    "2CWRP4PP9:shared_process": [],
+    "2CXY62DPD:shared_process": [],
+    "2CY375FSZ:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

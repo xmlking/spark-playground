@@ -1,0 +1,1241 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>b7373496-0156-1000-82d2-0516957e32ee</groupId>
+  <name>Hive Streaming Olympics</name>
+  <snippet>
+    <connections>
+      <id>b73b3b5c-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b737c1bd-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b7374e09-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b73b5192-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b7384287-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b737c1bd-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b73b8092-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b73a66d4-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>unsupported content</selectedRelationships>
+      <selectedRelationships>failure</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b737c1bd-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b92a5904-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b73a66d4-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>incompatible</selectedRelationships>
+      <selectedRelationships>failure</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b7384287-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b946dd2e-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b738fdbd-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b7384287-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b9486e23-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b73a66d4-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>failure</selectedRelationships>
+      <source>
+        <groupId>b7373496-0156-1000-0000-000000000000</groupId>
+        <id>b738fdbd-0156-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processors>
+      <id>b7374e09-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>18.952239990234375</x>
+        <y>0.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Keep Source File</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>false</defaultValue>
+              <description>If true, the file is not deleted after it has been copied to the Content Repository; this causes the file to be picked up continually and is useful for testing purposes.  If not keeping original NiFi will need write permissions on the directory it is pulling from otherwise it will ignore the file.</description>
+              <displayName>Keep Source File</displayName>
+              <dynamic>false</dynamic>
+              <name>Keep Source File</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>
+              <defaultValue>0 sec</defaultValue>
+              <description>The minimum age that a file must be in order to be pulled; any file younger than this amount of time (according to last modification date) will be ignored</description>
+              <displayName>Minimum File Age</displayName>
+              <dynamic>false</dynamic>
+              <name>Minimum File Age</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>
+              <defaultValue>0 sec</defaultValue>
+              <description>Indicates how long to wait before performing a directory listing</description>
+              <displayName>Polling Interval</displayName>
+              <dynamic>false</dynamic>
+              <name>Polling Interval</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Input Directory</key>
+            <value>
+              <description>The input directory from which to pull files</description>
+              <displayName>Input Directory</displayName>
+              <dynamic>false</dynamic>
+              <name>Input Directory</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+            <value>
+              <description>The maximum age that a file must be in order to be pulled; any file older than this amount of time (according to last modification date) will be ignored</description>
+              <displayName>Maximum File Age</displayName>
+              <dynamic>false</dynamic>
+              <name>Maximum File Age</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <defaultValue>10</defaultValue>
+              <description>The maximum number of files to pull in each iteration</description>
+              <displayName>Batch Size</displayName>
+              <dynamic>false</dynamic>
+              <name>Batch Size</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+            <value>
+              <description>The maximum size that a file can be in order to be pulled</description>
+              <displayName>Maximum File Size</displayName>
+              <dynamic>false</dynamic>
+              <name>Maximum File Size</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>
+              <defaultValue>0 B</defaultValue>
+              <description>The minimum size that a file must be in order to be pulled</description>
+              <displayName>Minimum File Size</displayName>
+              <dynamic>false</dynamic>
+              <name>Minimum File Size</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>Indicates whether or not hidden files should be ignored</description>
+              <displayName>Ignore Hidden Files</displayName>
+              <dynamic>false</dynamic>
+              <name>Ignore Hidden Files</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>Indicates whether or not to pull files from subdirectories</description>
+              <displayName>Recurse Subdirectories</displayName>
+              <dynamic>false</dynamic>
+              <name>Recurse Subdirectories</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>
+              <defaultValue>[^\.].*</defaultValue>
+              <description>Only files whose names match the given regular expression will be picked up</description>
+              <displayName>File Filter</displayName>
+              <dynamic>false</dynamic>
+              <name>File Filter</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+            <value>
+              <description>When Recurse Subdirectories is true, then only subdirectories whose path matches the given regular expression will be scanned</description>
+              <displayName>Path Filter</displayName>
+              <dynamic>false</dynamic>
+              <name>Path Filter</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Keep Source File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Input Directory</key>
+            <value>/Users/nshawa/Downloads/olympics</value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>10</value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>0 B</value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>[^\.].*</value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetFile</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetFile</type>
+    </processors>
+    <processors>
+      <id>b737c1bd-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>719.5092468261719</x>
+        <y>12.21566653251648</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Schema Output Destination</key>
+            <value>
+              <allowableValues>
+                <displayName>flowfile-attribute</displayName>
+                <value>flowfile-attribute</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>flowfile-content</displayName>
+                <value>flowfile-content</value>
+              </allowableValues>
+              <defaultValue>flowfile-content</defaultValue>
+              <description>Control if Avro schema is written as a new flowfile attribute 'inferred.avro.schema' or written in the flowfile content. Writing to flowfile content will overwrite any existing flowfile content.</description>
+              <displayName>Schema Output Destination</displayName>
+              <dynamic>false</dynamic>
+              <name>Schema Output Destination</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Get CSV Header Definition From Data</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>This property only applies to CSV content type. If "true" the processor will attempt to read the CSV header definition from the first line of the input data.</description>
+              <displayName>Get CSV Header Definition From Data</displayName>
+              <dynamic>false</dynamic>
+              <name>Get CSV Header Definition From Data</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Avro Record Name</key>
+            <value>
+              <description>Value to be placed in the Avro record schema "name" field.</description>
+              <displayName>Avro Record Name</displayName>
+              <dynamic>false</dynamic>
+              <name>Avro Record Name</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Charset</key>
+            <value>
+              <defaultValue>UTF-8</defaultValue>
+              <description>Character encoding of CSV data.</description>
+              <displayName>Charset</displayName>
+              <dynamic>false</dynamic>
+              <name>Charset</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV Header Line Skip Count</key>
+            <value>
+              <defaultValue>0</defaultValue>
+              <description>This property only applies to CSV content type. Specifies the number of lines that should be skipped when reading the CSV data. Setting this value to 0 is equivalent to saying "the entire contents of the file should be read". If the property "Get CSV Header Definition From Data" is set then the first line of the CSV  file will be read in and treated as the CSV header definition. Since this will remove the header line from the data care should be taken to make sure the value of "CSV header Line Skip Count" is set to 0 to ensure no data is skipped.</description>
+              <displayName>CSV Header Line Skip Count</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV Header Line Skip Count</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV delimiter</key>
+            <value>
+              <defaultValue>,</defaultValue>
+              <description>Delimiter character for CSV records</description>
+              <displayName>CSV delimiter</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV delimiter</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV Escape String</key>
+            <value>
+              <defaultValue>\</defaultValue>
+              <description>This property only applies to CSV content type. String that represents an escape sequence in the CSV FlowFile content data.</description>
+              <displayName>CSV Escape String</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV Escape String</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV Header Definition</key>
+            <value>
+              <description>This property only applies to CSV content type. Comma separated string defining the column names expected in the CSV data. EX: "fname,lname,zip,address". The elements present in this string should be in the same order as the underlying data. Setting this property will cause the value of "Get CSV Header Definition From Data" to be ignored instead using this value.</description>
+              <displayName>CSV Header Definition</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV Header Definition</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Input Content Type</key>
+            <value>
+              <allowableValues>
+                <displayName>use mime.type value</displayName>
+                <value>use mime.type value</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>json</displayName>
+                <value>json</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>csv</displayName>
+                <value>csv</value>
+              </allowableValues>
+              <defaultValue>use mime.type value</defaultValue>
+              <description>Content Type of data present in the incoming FlowFile's content. Only "json" or "csv" are supported. If this value is set to "use mime.type value" the incoming Flowfile's attribute "MIME_TYPE" will be used to determine the Content Type.</description>
+              <displayName>Input Content Type</displayName>
+              <dynamic>false</dynamic>
+              <name>Input Content Type</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Pretty Avro Output</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>If true the Avro output will be formatted.</description>
+              <displayName>Pretty Avro Output</displayName>
+              <dynamic>false</dynamic>
+              <name>Pretty Avro Output</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV Quote String</key>
+            <value>
+              <defaultValue>'</defaultValue>
+              <description>This property only applies to CSV content type. String that represents a literal quote character in the CSV FlowFile content data.</description>
+              <displayName>CSV Quote String</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV Quote String</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Number Of Records To Analyze</key>
+            <value>
+              <defaultValue>10</defaultValue>
+              <description>This property only applies to JSON content type. The number of JSON records that should be examined to determine the Avro schema. The higher the value the better chance kite has of detecting the appropriate type. However the default value of 10 is almost always enough.</description>
+              <displayName>Number Of Records To Analyze</displayName>
+              <dynamic>false</dynamic>
+              <name>Number Of Records To Analyze</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Schema Output Destination</key>
+            <value>flowfile-attribute</value>
+          </entry>
+          <entry>
+            <key>Get CSV Header Definition From Data</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Avro Record Name</key>
+            <value>Olympics</value>
+          </entry>
+          <entry>
+            <key>Charset</key>
+            <value>UTF-8</value>
+          </entry>
+          <entry>
+            <key>CSV Header Line Skip Count</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>CSV delimiter</key>
+            <value>,</value>
+          </entry>
+          <entry>
+            <key>CSV Escape String</key>
+            <value>\</value>
+          </entry>
+          <entry>
+            <key>CSV Header Definition</key>
+            <value>City,Edition,Sport,sub_sport,Athlete,country,Gender,Event,Event_gender,Medal</value>
+          </entry>
+          <entry>
+            <key>Input Content Type</key>
+            <value>csv</value>
+          </entry>
+          <entry>
+            <key>Pretty Avro Output</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>CSV Quote String</key>
+            <value>"</value>
+          </entry>
+          <entry>
+            <key>Number Of Records To Analyze</key>
+            <value>10</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>InferAvroSchema</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>original</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>unsupported content</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.kite.InferAvroSchema</type>
+    </processors>
+    <processors>
+      <id>b7384287-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>751.5623474121094</x>
+        <y>241.3683567047119</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>CSV quote character</key>
+            <value>
+              <defaultValue>"</defaultValue>
+              <description>Quote character for CSV values</description>
+              <displayName>CSV quote character</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV quote character</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Use CSV header line</key>
+            <value>
+              <defaultValue>false</defaultValue>
+              <description>Whether to use the first line as a header</description>
+              <displayName>Use CSV header line</displayName>
+              <dynamic>false</dynamic>
+              <name>Use CSV header line</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV charset</key>
+            <value>
+              <defaultValue>utf8</defaultValue>
+              <description>Character set for CSV files</description>
+              <displayName>CSV charset</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV charset</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Lines to skip</key>
+            <value>
+              <defaultValue>0</defaultValue>
+              <description>Number of lines to skip before reading header or data</description>
+              <displayName>Lines to skip</displayName>
+              <dynamic>false</dynamic>
+              <name>Lines to skip</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV delimiter</key>
+            <value>
+              <defaultValue>,</defaultValue>
+              <description>Delimiter character for CSV records</description>
+              <displayName>CSV delimiter</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV delimiter</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Hadoop configuration files</key>
+            <value>
+              <description>A comma-separated list of Hadoop configuration files</description>
+              <displayName>Hadoop configuration files</displayName>
+              <dynamic>false</dynamic>
+              <name>Hadoop configuration files</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>CSV escape character</key>
+            <value>
+              <defaultValue>\</defaultValue>
+              <description>Escape character for CSV values</description>
+              <displayName>CSV escape character</displayName>
+              <dynamic>false</dynamic>
+              <name>CSV escape character</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Record schema</key>
+            <value>
+              <description>Outgoing Avro schema for each record created from a CSV row</description>
+              <displayName>Record schema</displayName>
+              <dynamic>false</dynamic>
+              <name>Record schema</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>CSV quote character</key>
+            <value>"</value>
+          </entry>
+          <entry>
+            <key>Use CSV header line</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>CSV charset</key>
+            <value>utf8</value>
+          </entry>
+          <entry>
+            <key>Lines to skip</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>CSV delimiter</key>
+            <value>,</value>
+          </entry>
+          <entry>
+            <key>Hadoop configuration files</key>
+          </entry>
+          <entry>
+            <key>CSV escape character</key>
+            <value>\</value>
+          </entry>
+          <entry>
+            <key>Record schema</key>
+            <value>${inferred.avro.schema}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ConvertCSVToAvro</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>incompatible</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.kite.ConvertCSVToAvro</type>
+    </processors>
+    <processors>
+      <id>b738fdbd-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>677.7328796386719</x>
+        <y>535.5723361968994</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Kerberos Keytab</key>
+            <value>
+              <description>Kerberos keytab associated with the principal. Requires nifi.kerberos.krb5.file to be set in your nifi.properties</description>
+              <displayName>Kerberos Keytab</displayName>
+              <dynamic>false</dynamic>
+              <name>Kerberos Keytab</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-partition-cols</key>
+            <value>
+              <description>A comma-delimited list of column names on which the table has been partitioned. The order of values in this list must correspond exactly to the order of partition columns specified during the table creation.</description>
+              <displayName>Partition Columns</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-partition-cols</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-metastore-uri</key>
+            <value>
+              <description>The URI location for the Hive Metastore. Note that this is not the location of the Hive Server. The default port for the Hive metastore is 9043.</description>
+              <displayName>Hive Metastore URI</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-metastore-uri</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>
+              <description>Kerberos principal to authenticate as. Requires nifi.kerberos.krb5.file to be set in your nifi.properties</description>
+              <displayName>Kerberos Principal</displayName>
+              <dynamic>false</dynamic>
+              <name>Kerberos Principal</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-table-name</key>
+            <value>
+              <description>The name of the database table in which to put the data.</description>
+              <displayName>Table Name</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-table-name</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-transactions-per-batch</key>
+            <value>
+              <defaultValue>100</defaultValue>
+              <description>A hint to Hive Streaming indicating how many transactions the processor task will need. This value must be greater than 1.</description>
+              <displayName>Transactions per Batch</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-transactions-per-batch</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-autocreate-partition</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>Flag indicating whether partitions should be automatically created</description>
+              <displayName>Auto-Create Partitions</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-autocreate-partition</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-config-resources</key>
+            <value>
+              <description>A file or comma separated list of files which contains the Hive configuration (hive-site.xml, e.g.). Without this, Hadoop will search the classpath for a 'hive-site.xml' file or will revert to a default configuration. Note that to enable authentication with Kerberos e.g., the appropriate properties must be set in the configuration files. Please see the Hive documentation for more details.</description>
+              <displayName>Hive Configuration Resources</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-config-resources</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-database-name</key>
+            <value>
+              <description>The name of the database in which to put the data.</description>
+              <displayName>Database Name</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-database-name</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-max-open-connections</key>
+            <value>
+              <defaultValue>8</defaultValue>
+              <description>The maximum number of open connections that can be allocated from this pool at the same time, or negative for no limit.</description>
+              <displayName>Max Open Connections</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-max-open-connections</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>hive-stream-heartbeat-interval</key>
+            <value>
+              <defaultValue>60</defaultValue>
+              <description>Indicates that a heartbeat should be sent when the specified number of seconds has elapsed. A value of 0 indicates that no heartbeat should be sent.</description>
+              <displayName>Heartbeat Interval</displayName>
+              <dynamic>false</dynamic>
+              <name>hive-stream-heartbeat-interval</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Kerberos Keytab</key>
+          </entry>
+          <entry>
+            <key>hive-stream-partition-cols</key>
+          </entry>
+          <entry>
+            <key>hive-stream-metastore-uri</key>
+            <value>thrift://sandbox.hortonworks.com:9083</value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+          </entry>
+          <entry>
+            <key>hive-stream-table-name</key>
+            <value>olympics</value>
+          </entry>
+          <entry>
+            <key>hive-stream-transactions-per-batch</key>
+            <value>100</value>
+          </entry>
+          <entry>
+            <key>hive-stream-autocreate-partition</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>hive-config-resources</key>
+            <value>/Users/nshawa/dev/bhp/hive-site.xml</value>
+          </entry>
+          <entry>
+            <key>hive-stream-database-name</key>
+            <value>default</value>
+          </entry>
+          <entry>
+            <key>hive-stream-max-open-connections</key>
+            <value>8</value>
+          </entry>
+          <entry>
+            <key>hive-stream-heartbeat-interval</key>
+            <value>60</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PutHiveStreaming</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>retry</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.hive.PutHiveStreaming</type>
+    </processors>
+    <processors>
+      <id>b73a66d4-0156-1000-0000-000000000000</id>
+      <parentGroupId>b7373496-0156-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>278.8172092437744</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Group</key>
+            <value>
+              <description>Sets the group on the output file to the value of this attribute.  You may also use expression language such as ${file.group}.</description>
+              <displayName>Group</displayName>
+              <dynamic>false</dynamic>
+              <name>Group</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Owner</key>
+            <value>
+              <description>Sets the owner on the output file to the value of this attribute.  You may also use expression language such as ${file.owner}.</description>
+              <displayName>Owner</displayName>
+              <dynamic>false</dynamic>
+              <name>Owner</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Create Missing Directories</key>
+            <value>
+              <allowableValues>
+                <displayName>true</displayName>
+                <value>true</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>false</displayName>
+                <value>false</value>
+              </allowableValues>
+              <defaultValue>true</defaultValue>
+              <description>If true, then missing destination directories will be created. If false, flowfiles are penalized and sent to failure.</description>
+              <displayName>Create Missing Directories</displayName>
+              <dynamic>false</dynamic>
+              <name>Create Missing Directories</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+            <value>
+              <description>Sets the permissions on the output file to the value of this attribute.  Format must be either UNIX rwxrwxrwx with a - in place of denied permissions (e.g. rw-r--r--) or an octal number (e.g. 644).  You may also use expression language such as ${file.permissions}.</description>
+              <displayName>Permissions</displayName>
+              <dynamic>false</dynamic>
+              <name>Permissions</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Count</key>
+            <value>
+              <description>Specifies the maximum number of files that can exist in the output directory</description>
+              <displayName>Maximum File Count</displayName>
+              <dynamic>false</dynamic>
+              <name>Maximum File Count</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Modified Time</key>
+            <value>
+              <description>Sets the lastModifiedTime on the output file to the value of this attribute.  Format must be yyyy-MM-dd'T'HH:mm:ssZ.  You may also use expression language such as ${file.lastModifiedTime}.</description>
+              <displayName>Last Modified Time</displayName>
+              <dynamic>false</dynamic>
+              <name>Last Modified Time</name>
+              <required>false</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Directory</key>
+            <value>
+              <description>The directory to which files should be written. You may use expression language such as /aa/bb/${path}</description>
+              <displayName>Directory</displayName>
+              <dynamic>false</dynamic>
+              <name>Directory</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>true</supportsEl>
+            </value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>
+              <allowableValues>
+                <displayName>replace</displayName>
+                <value>replace</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>ignore</displayName>
+                <value>ignore</value>
+              </allowableValues>
+              <allowableValues>
+                <displayName>fail</displayName>
+                <value>fail</value>
+              </allowableValues>
+              <defaultValue>fail</defaultValue>
+              <description>Indicates what should happen when a file with the same name already exists in the output directory</description>
+              <displayName>Conflict Resolution Strategy</displayName>
+              <dynamic>false</dynamic>
+              <name>Conflict Resolution Strategy</name>
+              <required>true</required>
+              <sensitive>false</sensitive>
+              <supportsEl>false</supportsEl>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Group</key>
+          </entry>
+          <entry>
+            <key>Owner</key>
+          </entry>
+          <entry>
+            <key>Create Missing Directories</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+          </entry>
+          <entry>
+            <key>Maximum File Count</key>
+          </entry>
+          <entry>
+            <key>Last Modified Time</key>
+          </entry>
+          <entry>
+            <key>Directory</key>
+            <value>/Users/nshawa/Downloads/olympics_failed</value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>fail</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PutFile</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.PutFile</type>
+    </processors>
+  </snippet>
+  <timestamp>08/24/2016 07:25:13 AEST</timestamp>
+</template>
