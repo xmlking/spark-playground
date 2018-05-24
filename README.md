@@ -9,14 +9,17 @@ Apache Spark playground
 
 
 ### Prerequisites
-1. Gradle > 4.2.1 [ Install via [sdkman](http://sdkman.io/)]
+1. Gradle > 4.7 [ Install via [sdkman](http://sdkman.io/)]
 2. Docker for Mac [[Setup Instructions](./docs/Docker.md)]
 3. Apache Spark [[Download Link](https://spark.apache.org/downloads.html)]
 
-#### Install spark via downloading 
-    
-    Download `spark-x.x.x-bin-hadoop2.7.tgz` from  https://spark.apache.org/downloads.html
-    Install Spark by unpacking i.e., /Developer/Applications/spark-2.2.0-bin-hadoop2.7
+#### Install spark via SDKMAN (Preferred for Windows and Mac users)
+```bash
+# install spark v2.1.1 or you prefered version.
+# this will give you access to spark-shell, spark-submit CLI
+sdk ls spark
+sdk i spark 2.1.1
+```
 
 #### Install spark via brew (Mac)
 ```bash
@@ -26,6 +29,11 @@ brew install apache-spark
 # verifying installation
 spark-shell
 ```
+
+#### Install spark via downloading
+    
+    Download `spark-x.x.x-bin-hadoop2.7.tgz` from  https://spark.apache.org/downloads.html
+    Install Spark by unpacking i.e., /Developer/Applications/spark-2.2.0-bin-hadoop2.7
 
 ### Build
 
@@ -127,7 +135,7 @@ nohup spark-submit \
 ### Gradle Commands
 ```bash
 # upgrade project gradle version
-gradle wrapper --gradle-version 4.2.1 --distribution-type all
+gradle wrapper --gradle-version 5.0 --distribution-type all
 # gradle daemon status 
 gradle --status
 gradle --stop
