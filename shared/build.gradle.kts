@@ -1,5 +1,5 @@
 import org.gradle.api.tasks.bundling.Jar
-val sparkVersion by project
+val sparkVersion: String by project.extra
 
 application {
     mainClassName = "dummy"

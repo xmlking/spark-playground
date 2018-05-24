@@ -1,4 +1,4 @@
-val sparkVersion by project
+val sparkVersion: String by project.extra
 
 application {
     mainClassName = "com.sumo.experiments.StreamingJobKt"

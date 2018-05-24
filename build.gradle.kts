@@ -4,11 +4,12 @@ import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 import org.gradle.jvm.tasks.Jar
 import java.time.LocalDateTime
 
-val scalaVersion by project
+val scalaVersion: String by project.extra
+val kotlinLoggingVersion: String by project.extra
 
 plugins {
-    val kotlinVersion = "1.1.51"
-    val gradleShadowPluginVersion = "2.0.1"
+    val kotlinVersion = "1.2.41"
+    val gradleShadowPluginVersion = "2.0.4"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion // apply false
     id("org.jetbrains.kotlin.plugin.noarg") version kotlinVersion apply false
     id("com.github.johnrengelman.shadow") version gradleShadowPluginVersion apply false
@@ -29,8 +30,9 @@ subprojects {
     }
 
     dependencies {
-        compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-        compile("org.jetbrains.kotlin:kotlin-reflect")
+        // kotlin
+        compile(kotlin("stdlib-jdk8"))
+        compile(kotlin("reflect"))
     }
 
     configure<NoArgExtension> {
@@ -40,8 +42,9 @@ subprojects {
     tasks {
         withType<KotlinCompile>().all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = JavaVersion.VERSION_1_8.toString()
                 freeCompilerArgs = listOf("-Xjsr305=strict")
+                javaParameters = true
             }
         }
 
