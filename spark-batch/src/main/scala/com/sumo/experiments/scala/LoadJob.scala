@@ -2,7 +2,7 @@ package com.sumo.experiments.scala
 
 import org.apache.spark.sql.SparkSession
 
-object BatchJob extends App {
+object LoadJob extends App {
     //  println("Hello, " + args(0))
 
     val spark = SparkSession.builder()
